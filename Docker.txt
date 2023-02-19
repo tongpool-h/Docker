@@ -1,0 +1,33 @@
+install server (Container)
+> docker run -d -p 80:80 docker/getting-started
+> docker rmi docker/getting-started
+> docker run -dit -p 8080:80 --name php-webapp php-image
+
+***
+docker info
+docker-compose --version
+***
+
+See docker images 
+> docker images
+
+Container
+> docker ps #ดู  Container
+> docker ps -a สามารถดู Container ได้ 
+
+Start Stop Images
+docker stop 5553e115e8f4
+docker start 5553e115e8f4
+
+#Setup PHP
+> docker build . -t php-image (สร้าง Images)
+> docker run -dit -p 8080:80 --name php-webapp php-image
+
+#Setup Wordpress
+https://github.com/iamsamitdev/WordPressDocker
+image: wordpress:5.9.3-php7.4-apache
+
+> docker-compose up -d
+
+Password
+Admin: 1lKzThoF0&(tkJ3!Be
